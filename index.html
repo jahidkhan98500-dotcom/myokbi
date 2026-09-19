@@ -1,2366 +1,933 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
-  <meta
-    name="theme-color"
-    content="#faf8ff"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   >
 
   <meta
     name="description"
-    content="Hopweb — A modern digital work and earning platform."
+    content="OKB — A modern digital platform for work, rewards and financial services."
   >
 
-  <title>Hopweb — Digital Work Platform</title>
+  <meta name="theme-color" content="#b88932">
+
+  <title>OKB — Digital Work & Rewards Platform</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
-    href="../assets/css/common.css"
   >
 
-
-  <!-- =================================================
-       PUBLIC PAGE STYLE
-       ================================================= -->
-
-  <style>
-
-    :root{
-      --public-primary:#7546dc;
-      --public-primary-2:#9b55e8;
-      --public-purple:#5d35bd;
-      --public-bg:#faf8ff;
-      --public-dark:#211b2c;
-      --public-muted:#77727f;
-      --public-border:#ece7f4;
-    }
-
-
-    *{
-      box-sizing:border-box;
-    }
-
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-
-    body{
-      margin:0;
-      background:#ededed;
-      color:var(--public-dark);
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Noto Sans Bengali",
-        sans-serif;
-    }
-
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-
-    button{
-      font:inherit;
-    }
-
-
-    /* ================================================
-       MAIN PUBLIC APP
-       ================================================ */
-
-    .public-app{
-      width:100%;
-      max-width:470px;
-      min-height:100vh;
-      margin:auto;
-      background:
-        linear-gradient(
-          180deg,
-          #faf8ff 0%,
-          #ffffff 35%,
-          #faf8ff 100%
-        );
-      overflow:hidden;
-    }
-
-
-    /* ================================================
-       HEADER
-       ================================================ */
-
-    .public-header{
-      position:sticky;
-      top:0;
-      z-index:50;
-
-      min-height:68px;
-      padding:
-        10px
-        14px;
-
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-
-      background:rgba(250,248,255,.92);
-      backdrop-filter:blur(15px);
-
-      border-bottom:1px solid rgba(236,231,244,.8);
-    }
-
-
-    .public-brand{
-      display:flex;
-      align-items:center;
-      gap:9px;
-      min-width:0;
-    }
-
-
-    .public-logo{
-      width:40px;
-      height:40px;
-      border-radius:13px;
-      object-fit:cover;
-      flex-shrink:0;
-    }
-
-
-    .public-brand-text{
-      min-width:0;
-    }
-
-
-    .public-brand-name{
-      display:block;
-      font-size:21px;
-      font-weight:800;
-      color:#7650aa;
-      line-height:1;
-    }
-
-
-    .public-brand-sub{
-      display:block;
-      margin-top:3px;
-      font-size:8px;
-      color:#918b98;
-      letter-spacing:.4px;
-    }
-
-
-    .public-auth-buttons{
-      display:flex;
-      align-items:center;
-      gap:6px;
-    }
-
-
-    .public-auth-btn{
-      min-height:36px;
-      padding:0 11px;
-
-      border-radius:10px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-size:11px;
-      font-weight:800;
-
-      white-space:nowrap;
-    }
-
-
-    .public-register{
-      color:var(--public-primary);
-      border:1px solid #d9ccef;
-      background:#fff;
-    }
-
-
-    .public-login{
-      color:#fff;
-      border:0;
-      background:
-        linear-gradient(
-          135deg,
-          var(--public-primary),
-          var(--public-primary-2)
-        );
-
-      box-shadow:
-        0 5px 14px
-        rgba(117,70,220,.20);
-    }
-
-
-    /* ================================================
-       PAGE
-       ================================================ */
-
-    .public-page{
-      padding:14px;
-    }
-
-
-    /* ================================================
-       HERO
-       ================================================ */
-
-    .public-hero{
-      position:relative;
-
-      min-height:500px;
-      padding:25px 18px 20px;
-
-      overflow:hidden;
-
-      border-radius:28px;
-
-      color:#fff;
-
-      background:
-        radial-gradient(
-          circle at 85% 15%,
-          rgba(255,255,255,.24),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 15% 90%,
-          rgba(255,255,255,.13),
-          transparent 35%
-        ),
-        linear-gradient(
-          145deg,
-          #6c42d2,
-          #8146dc 48%,
-          #a052d4
-        );
-
-      box-shadow:
-        0 15px 35px
-        rgba(94,54,180,.20);
-    }
-
-
-    .hero-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-
-      padding:7px 11px;
-
-      border-radius:30px;
-
-      background:#ffffff1f;
-      border:1px solid #ffffff2d;
-
-      font-size:10px;
-      font-weight:700;
-
-      backdrop-filter:blur(5px);
-    }
-
-
-    .hero-content{
-      position:relative;
-      z-index:3;
-      margin-top:25px;
-    }
-
-
-    .hero-title{
-      margin:0;
-
-      font-size:34px;
-      line-height:1.12;
-      letter-spacing:-.8px;
-      font-weight:900;
-    }
-
-
-    .hero-title span{
-      color:#ffe17a;
-    }
-
-
-    .hero-description{
-      margin:15px 0 0;
-
-      max-width:370px;
-
-      font-size:13px;
-      line-height:1.8;
-
-      color:#ffffffdb;
-    }
-
-
-    .hero-actions{
-      display:flex;
-      gap:9px;
-
-      margin-top:22px;
-    }
-
-
-    .hero-button{
-      min-height:46px;
-      padding:0 17px;
-
-      border-radius:14px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-size:12px;
-      font-weight:800;
-    }
-
-
-    .hero-primary{
-      color:#21182b;
-      background:#fff;
-      box-shadow:0 7px 18px #3d1c701f;
-    }
-
-
-    .hero-secondary{
-      color:#fff;
-      border:1px solid #ffffff45;
-      background:#ffffff18;
-    }
-
-
-    /* ================================================
-       HERO PHONE GRAPHIC
-       ================================================ */
-
-    .hero-phone-area{
-      position:absolute;
-
-      left:50%;
-      bottom:-72px;
-
-      transform:translateX(-50%);
-
-      width:205px;
-      height:265px;
-
-      border-radius:30px 30px 0 0;
-
-      background:
-        linear-gradient(
-          160deg,
-          #ffffff,
-          #f1edfa
-        );
-
-      border:6px solid #29232e;
-
-      box-shadow:
-        0 18px 45px
-        rgba(32,16,55,.30);
-
-      overflow:hidden;
-    }
-
-
-    .hero-phone-top{
-      height:24px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      background:#fff;
-    }
-
-
-    .hero-phone-notch{
-      width:62px;
-      height:12px;
-
-      border-radius:20px;
-
-      background:#242029;
-    }
-
-
-    .phone-screen{
-      padding:12px;
-    }
-
-
-    .phone-screen-logo{
-      width:31px;
-      height:31px;
-      border-radius:9px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #7650dc,
-          #b45ce2
-        );
-
-      display:grid;
-      place-items:center;
-
-      color:#fff;
-      font-size:13px;
-      font-weight:900;
-    }
-
-
-    .phone-line{
-      height:8px;
-      margin-top:9px;
-
-      border-radius:10px;
-
-      background:#e8e1f4;
-    }
-
-
-    .phone-line.short{
-      width:60%;
-    }
-
-
-    .phone-card{
-      margin-top:14px;
-      height:82px;
-
-      border-radius:16px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #7446db,
-          #a151d7
-        );
-
-      padding:12px;
-
-      color:#fff;
-    }
-
-
-    .phone-card small{
-      font-size:7px;
-      opacity:.8;
-    }
-
-
-    .phone-card strong{
-      display:block;
-      margin-top:7px;
-      font-size:20px;
-    }
-
-
-    .phone-buttons{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:6px;
-
-      margin-top:10px;
-    }
-
-
-    .phone-mini{
-      height:28px;
-
-      border-radius:8px;
-
-      background:#f0ebf8;
-    }
-
-
-    /* ================================================
-       TRUST BAR
-       ================================================ */
-
-    .trust-bar{
-      margin-top:13px;
-
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-
-      gap:7px;
-    }
-
-
-    .trust-item{
-      padding:12px 7px;
-
-      text-align:center;
-
-      border:1px solid var(--public-border);
-      border-radius:15px;
-
-      background:#fff;
-
-      box-shadow:
-        0 5px 16px
-        rgba(40,20,70,.05);
-    }
-
-
-    .trust-icon{
-      font-size:19px;
-    }
-
-
-    .trust-item strong{
-      display:block;
-      margin-top:5px;
-
-      font-size:11px;
-    }
-
-
-    .trust-item small{
-      display:block;
-      margin-top:2px;
-
-      font-size:8px;
-      color:var(--public-muted);
-    }
-
-
-    /* ================================================
-       SECTION
-       ================================================ */
-
-    .public-section{
-      margin-top:27px;
-    }
-
-
-    .section-heading{
-      margin:0;
-
-      font-size:21px;
-      font-weight:900;
-    }
-
-
-    .section-description{
-      margin:7px 0 0;
-
-      color:var(--public-muted);
-
-      font-size:11px;
-      line-height:1.7;
-    }
-
-
-    /* ================================================
-       SERVICE CARDS
-       ================================================ */
-
-    .service-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-
-      gap:10px;
-
-      margin-top:14px;
-    }
-
-
-    .service-card{
-      min-height:142px;
-
-      padding:15px;
-
-      border-radius:19px;
-
-      border:1px solid var(--public-border);
-
-      background:#fff;
-
-      box-shadow:
-        0 6px 18px
-        rgba(40,20,70,.06);
-
-      transition:.2s;
-    }
-
-
-    .service-card:active{
-      transform:scale(.98);
-    }
-
-
-    .service-icon{
-      width:43px;
-      height:43px;
-
-      border-radius:14px;
-
-      display:grid;
-      place-items:center;
-
-      font-size:21px;
-
-      background:#f1eaff;
-    }
-
-
-    .service-card strong{
-      display:block;
-
-      margin-top:11px;
-
-      font-size:13px;
-    }
-
-
-    .service-card small{
-      display:block;
-
-      margin-top:4px;
-
-      color:var(--public-muted);
-
-      font-size:9px;
-      line-height:1.6;
-    }
-
-
-    /* ================================================
-       VIDEO
-       ================================================ */
-
-    .video-card{
-      position:relative;
-
-      min-height:245px;
-
-      margin-top:14px;
-
-      border-radius:23px;
-
-      overflow:hidden;
-
-      background:
-        linear-gradient(
-          145deg,
-          #29213b,
-          #6441a8
-        );
-
-      box-shadow:
-        0 12px 30px
-        rgba(45,24,80,.18);
-    }
-
-
-    .video-title{
-      position:absolute;
-
-      left:17px;
-      top:16px;
-
-      z-index:3;
-
-      color:#fff;
-    }
-
-
-    .video-title strong{
-      display:block;
-      font-size:14px;
-    }
-
-
-    .video-title small{
-      display:block;
-      margin-top:3px;
-      font-size:9px;
-      color:#ffffffbb;
-    }
-
-
-    .video-phone{
-      position:absolute;
-
-      left:50%;
-      bottom:-35px;
-
-      transform:translateX(-50%);
-
-      width:145px;
-      height:205px;
-
-      padding:7px;
-
-      border-radius:22px;
-
-      background:#17131e;
-
-      box-shadow:
-        0 15px 35px
-        rgba(0,0,0,.35);
-    }
-
-
-    .video-screen{
-      width:100%;
-      height:100%;
-
-      border-radius:17px;
-
-      background:
-        linear-gradient(
-          160deg,
-          #f9f6ff,
-          #e8dcff
-        );
-
-      overflow:hidden;
-
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-    }
-
-
-    .video-screen-top{
-      width:50px;
-      height:8px;
-
-      margin-top:7px;
-
-      border-radius:20px;
-
-      background:#28222f;
-    }
-
-
-    .video-play{
-      width:50px;
-      height:50px;
-
-      margin-top:38px;
-
-      border-radius:50%;
-
-      display:grid;
-      place-items:center;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--public-primary),
-          var(--public-primary-2)
-        );
-
-      color:#fff;
-
-      font-size:19px;
-
-      box-shadow:
-        0 8px 20px
-        rgba(117,70,220,.28);
-    }
-
-
-    /* ================================================
-       HOW IT WORKS
-       ================================================ */
-
-    .steps{
-      display:grid;
-      gap:10px;
-
-      margin-top:14px;
-    }
-
-
-    .step{
-      display:flex;
-      align-items:center;
-      gap:12px;
-
-      padding:14px;
-
-      border-radius:17px;
-
-      border:1px solid var(--public-border);
-
-      background:#fff;
-    }
-
-
-    .step-number{
-      width:39px;
-      height:39px;
-
-      flex-shrink:0;
-
-      display:grid;
-      place-items:center;
-
-      border-radius:12px;
-
-      color:#fff;
-
-      font-size:12px;
-      font-weight:900;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--public-primary),
-          var(--public-primary-2)
-        );
-    }
-
-
-    .step-content strong{
-      display:block;
-      font-size:12px;
-    }
-
-
-    .step-content small{
-      display:block;
-
-      margin-top:3px;
-
-      color:var(--public-muted);
-
-      font-size:9px;
-      line-height:1.6;
-    }
-
-
-    /* ================================================
-       COMPANY CARD
-       ================================================ */
-
-    .company-card{
-      margin-top:14px;
-
-      padding:19px;
-
-      border-radius:22px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #fff,
-          #f6f0ff
-        );
-
-      border:1px solid var(--public-border);
-
-      box-shadow:
-        0 8px 23px
-        rgba(40,20,70,.06);
-    }
-
-
-    .company-top{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-
-    .company-logo{
-      width:53px;
-      height:53px;
-
-      border-radius:16px;
-
-      object-fit:cover;
-    }
-
-
-    .company-name{
-      font-size:15px;
-      font-weight:900;
-    }
-
-
-    .company-type{
-      display:block;
-
-      margin-top:3px;
-
-      color:var(--public-muted);
-
-      font-size:9px;
-    }
-
-
-    .company-text{
-      margin:15px 0 0;
-
-      color:#615c68;
-
-      font-size:10px;
-      line-height:1.8;
-    }
-
-
-    /* ================================================
-       SHAREHOLDER
-       ================================================ */
-
-    .people-scroll{
-      display:flex;
-
-      gap:9px;
-
-      overflow-x:auto;
-
-      padding:3px 2px 8px;
-
-      scrollbar-width:none;
-    }
-
-
-    .people-scroll::-webkit-scrollbar{
-      display:none;
-    }
-
-
-    .person-card{
-      min-width:125px;
-
-      padding:14px 10px;
-
-      text-align:center;
-
-      border-radius:17px;
-
-      background:#fff;
-
-      border:1px solid var(--public-border);
-    }
-
-
-    .person-image{
-      width:52px;
-      height:52px;
-
-      margin:auto;
-
-      border-radius:50%;
-
-      object-fit:cover;
-
-      background:
-        linear-gradient(
-          135deg,
-          #e9dfff,
-          #d8c5ff
-        );
-    }
-
-
-    .person-card strong{
-      display:block;
-
-      margin-top:8px;
-
-      font-size:11px;
-    }
-
-
-    .person-card small{
-      display:block;
-
-      margin-top:3px;
-
-      color:var(--public-muted);
-
-      font-size:8px;
-    }
-
-
-    /* ================================================
-       RULES
-       ================================================ */
-
-    .rules-card{
-      margin-top:14px;
-
-      padding:17px;
-
-      border-radius:19px;
-
-      background:#fff;
-
-      border:1px solid var(--public-border);
-    }
-
-
-    .rule{
-      display:flex;
-      gap:9px;
-
-      padding:9px 0;
-
-      border-bottom:1px solid #f0edf3;
-    }
-
-
-    .rule:last-child{
-      border-bottom:0;
-    }
-
-
-    .rule-number{
-      width:22px;
-      height:22px;
-
-      flex-shrink:0;
-
-      display:grid;
-      place-items:center;
-
-      border-radius:7px;
-
-      background:#f0e8ff;
-      color:var(--public-primary);
-
-      font-size:9px;
-      font-weight:900;
-    }
-
-
-    .rule-text{
-      font-size:9px;
-      color:#66616d;
-      line-height:1.7;
-    }
-
-
-    /* ================================================
-       CONTACT
-       ================================================ */
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-
-      gap:9px;
-
-      margin-top:14px;
-    }
-
-
-    .contact-item{
-      padding:13px;
-
-      border-radius:16px;
-
-      background:#fff;
-
-      border:1px solid var(--public-border);
-    }
-
-
-    .contact-item span{
-      font-size:18px;
-    }
-
-
-    .contact-item strong{
-      display:block;
-
-      margin-top:7px;
-
-      font-size:10px;
-    }
-
-
-    .contact-item small{
-      display:block;
-
-      margin-top:3px;
-
-      color:var(--public-muted);
-
-      font-size:8px;
-
-      line-height:1.5;
-
-      word-break:break-word;
-    }
-
-
-    /* ================================================
-       FOOTER
-       ================================================ */
-
-    .public-footer{
-      margin-top:30px;
-
-      padding:25px 16px 28px;
-
-      text-align:center;
-
-      color:#fff;
-
-      background:
-        linear-gradient(
-          145deg,
-          #493080,
-          #7541a6
-        );
-    }
-
-
-    .footer-logo{
-      width:46px;
-      height:46px;
-
-      border-radius:14px;
-
-      object-fit:cover;
-    }
-
-
-    .footer-name{
-      display:block;
-
-      margin-top:8px;
-
-      font-size:17px;
-      font-weight:900;
-    }
-
-
-    .footer-text{
-      max-width:340px;
-
-      margin:7px auto 0;
-
-      font-size:9px;
-      line-height:1.7;
-
-      color:#ffffffb8;
-    }
-
-
-    .footer-links{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-
-      gap:14px;
-
-      margin-top:16px;
-    }
-
-
-    .footer-links a{
-      font-size:9px;
-      color:#fff;
-    }
-
-
-    .copyright{
-      margin-top:18px;
-
-      font-size:8px;
-
-      color:#ffffff80;
-    }
-
-
-    /* ================================================
-       AUTH LOADING
-       ================================================ */
-
-    .auth-loading{
-      position:fixed;
-
-      inset:0;
-
-      z-index:100;
-
-      display:none;
-
-      place-items:center;
-
-      background:
-        rgba(250,248,255,.96);
-
-      backdrop-filter:blur(10px);
-    }
-
-
-    .auth-loading.show{
-      display:grid;
-    }
-
-
-    .loading-box{
-      text-align:center;
-    }
-
-
-    .loading-logo{
-      width:62px;
-      height:62px;
-
-      border-radius:18px;
-
-      animation:
-        publicPulse 1.2s infinite;
-    }
-
-
-    .loading-text{
-      display:block;
-
-      margin-top:12px;
-
-      color:var(--public-primary);
-
-      font-size:11px;
-      font-weight:800;
-    }
-
-
-    @keyframes publicPulse{
-
-      0%,100%{
-        transform:scale(1);
-        opacity:.8;
-      }
-
-      50%{
-        transform:scale(1.07);
-        opacity:1;
-      }
-
-    }
-
-
-    @media(min-width:471px){
-
-      .public-app{
-        box-shadow:
-          0 0 40px
-          rgba(0,0,0,.12);
-      }
-
-    }
-
-  </style>
-
+  <!-- Public CSS -->
+  <link rel="stylesheet" href="CSS/public.css">
 </head>
-
 
 <body>
 
+  <!-- =========================================================
+       BACKGROUND DECORATION
+  ========================================================== -->
 
-<div class="public-app">
+  <div class="gold-orb orb-one"></div>
+  <div class="gold-orb orb-two"></div>
+  <div class="gold-orb orb-three"></div>
 
-
-  <!-- =================================================
+  <!-- =========================================================
        HEADER
-  ================================================== -->
+  ========================================================== -->
 
-  <header class="public-header">
+  <header class="site-header">
 
+    <div class="header-inner">
 
-    <a
-      href="index.html"
-      class="public-brand"
-    >
+      <!-- LOGO -->
+      <a href="index.html" class="brand">
+        <div class="brand-mark">
+          <span>O</span>
+        </div>
 
-      <img
-        class="public-logo"
-        src="../assets/img/logo/hopweb-logo.png"
-        alt="Hopweb"
-      >
-
-      <span class="public-brand-text">
-
-        <span class="public-brand-name">
-          Hopweb
-        </span>
-
-        <span class="public-brand-sub">
-          DIGITAL WORK PLATFORM
-        </span>
-
-      </span>
-
-    </a>
-
-
-    <div class="public-auth-buttons">
-
-
-      <a
-        href="register.html"
-        class="public-auth-btn public-register"
-      >
-        Register
+        <div class="brand-text">
+          <strong>OKB</strong>
+          <small>Digital Platform</small>
+        </div>
       </a>
 
+      <!-- DESKTOP NAV -->
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#how">How It Works</a>
+      </nav>
 
-      <a
-        href="login.html"
-        class="public-auth-btn public-login"
+      <!-- TOP SMALL BUTTONS -->
+      <div class="header-actions">
+
+        <a href="registration.html" class="top-btn login-btn">
+          Login
+        </a>
+
+        <a href="registration.html" class="top-btn register-btn">
+          Register
+        </a>
+
+      </div>
+
+      <!-- MOBILE MENU -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open Menu"
       >
-        Login
-      </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+    </div>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#how">How It Works</a>
+
+      <div class="mobile-auth">
+        <a href="registration.html">Login</a>
+        <a href="registration.html">Create Account</a>
+      </div>
 
     </div>
 
   </header>
 
 
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
 
-  <!-- =================================================
-       MAIN
-  ================================================== -->
+  <main>
 
-  <main class="public-page">
+    <section class="hero-section" id="home">
 
+      <div class="hero-container">
 
-    <!-- =================================================
-         HERO
-    ================================================== -->
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
 
-    <section class="public-hero">
-
-
-      <div class="hero-badge">
-        ✦ SMART DIGITAL WORK PLATFORM
-      </div>
-
-
-      <div class="hero-content">
-
-        <h1 class="hero-title">
-
-          Work Smart.<br>
-
-          <span>Earn Better.</span>
-
-        </h1>
-
-
-        <p class="hero-description">
-
-          Welcome to Hopweb — a modern digital platform
-          designed to connect users with online work,
-          applications, services and digital earning
-          opportunities.
-
-        </p>
-
-
-        <div class="hero-actions">
-
-
-          <a
-            href="register.html"
-            class="hero-button hero-primary"
-          >
-            Get Started
-          </a>
-
-
-          <a
-            href="#how-it-works"
-            class="hero-button hero-secondary"
-          >
-            How It Works
-          </a>
-
-
-        </div>
-
-      </div>
-
-
-
-      <!-- PHONE PREVIEW -->
-
-      <div class="hero-phone-area">
-
-
-        <div class="hero-phone-top">
-
-          <div class="hero-phone-notch"></div>
-
-        </div>
-
-
-        <div class="phone-screen">
-
-          <div class="phone-screen-logo">
-            H
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            THE NEXT GENERATION DIGITAL PLATFORM
           </div>
 
-
-          <div class="phone-line"></div>
-
-          <div class="phone-line short"></div>
-
-
-          <div class="phone-card">
-
-            <small>
-              AVAILABLE BALANCE
-            </small>
-
-            <strong>
-              ৳30,000
-            </strong>
-
-          </div>
-
-
-          <div class="phone-buttons">
-
-            <div class="phone-mini"></div>
-            <div class="phone-mini"></div>
-            <div class="phone-mini"></div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         TRUST
-    ================================================== -->
-
-    <section class="trust-bar">
-
-
-      <div class="trust-item">
-
-        <div class="trust-icon">
-          🔐
-        </div>
-
-        <strong>
-          Secure
-        </strong>
-
-        <small>
-          Account Protection
-        </small>
-
-      </div>
-
-
-      <div class="trust-item">
-
-        <div class="trust-icon">
-          ⚡
-        </div>
-
-        <strong>
-          Fast
-        </strong>
-
-        <small>
-          Digital Services
-        </small>
-
-      </div>
-
-
-      <div class="trust-item">
-
-        <div class="trust-icon">
-          💬
-        </div>
-
-        <strong>
-          Support
-        </strong>
-
-        <small>
-          Customer Care
-        </small>
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         ABOUT
-    ================================================== -->
-
-    <section class="public-section">
-
-
-      <h2 class="section-heading">
-        About Hopweb
-      </h2>
-
-
-      <p class="section-description">
-
-        A simple, modern and user-friendly digital
-        platform built to provide useful online work
-        and account services in one place.
-
-      </p>
-
-
-      <div class="company-card">
-
-
-        <div class="company-top">
-
-
-          <img
-            class="company-logo"
-            src="../assets/img/logo/hopweb-logo.svg"
-            alt="Hopweb Logo"
-          >
-
-
-          <div>
-
-            <div class="company-name">
-              Hopweb
-            </div>
-
-            <span class="company-type">
-              Digital Work & Services Platform
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-        <p class="company-text">
-
-          Hopweb provides a centralized digital environment
-          where registered users can access available work,
-          applications, wallet services, account management
-          and customer support.
-
-          <br><br>
-
-          Company information, service descriptions,
-          policies and other official details can be
-          updated here as the platform grows.
-
-        </p>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         SERVICES
-    ================================================== -->
-
-    <section class="public-section">
-
-
-      <h2 class="section-heading">
-        What We Offer
-      </h2>
-
-
-      <p class="section-description">
-        Explore the main services available through Hopweb.
-      </p>
-
-
-      <div class="service-grid">
-
-
-        <a
-          href="job-search.html"
-          class="service-card"
-        >
-
-          <div class="service-icon">
-            💼
-          </div>
-
-          <strong>
-            Job Search
-          </strong>
-
-          <small>
-            Explore available digital work and
-            opportunities.
-          </small>
-
-        </a>
-
-
-        <a
-          href="application.html"
-          class="service-card"
-        >
-
-          <div class="service-icon">
-            📋
-          </div>
-
-          <strong>
-            Applications
-          </strong>
-
-          <small>
-            Submit and manage your work applications.
-          </small>
-
-        </a>
-
-
-        <a
-          href="wallet.html"
-          class="service-card"
-        >
-
-          <div class="service-icon">
-            💰
-          </div>
-
-          <strong>
-            Wallet
-          </strong>
-
-          <small>
-            Manage your available account balance.
-          </small>
-
-        </a>
-
-
-        <a
-          href="help.html"
-          class="service-card"
-        >
-
-          <div class="service-icon">
-            🎧
-          </div>
-
-          <strong>
-            Customer Care
-          </strong>
-
-          <small>
-            Get help from the Hopweb support team.
-          </small>
-
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         VIDEO
-    ================================================== -->
-
-    <section class="public-section">
-
-
-      <h2 class="section-heading">
-        Discover Hopweb
-      </h2>
-
-
-      <p class="section-description">
-        A short introduction to the platform.
-      </p>
-
-
-      <div class="video-card">
-
-
-        <div class="video-title">
-
-          <strong>
-            How Hopweb Works
-          </strong>
-
-          <small>
-            Watch the platform introduction
-          </small>
-
-        </div>
-
-
-        <!--
-          এখানে পরে তোমার আসল video বসাতে পারবে।
-
-          Example:
-
-          <video controls>
-            <source src="../img/video/hopweb-intro.mp4">
-          </video>
-
-          এখন UI placeholder রাখা হয়েছে।
-        -->
-
-
-        <div class="video-phone">
-
-          <div class="video-screen">
-
-            <div class="video-screen-top"></div>
-
-
-            <div class="video-play">
-              ▶
-            </div>
-
-
-            <small
-              style="
-                margin-top:10px;
-                font-size:8px;
-                color:#6e6578;
-              "
+          <h1>
+            Build Your
+            <span>Digital Future</span>
+            With OKB.
+          </h1>
+
+          <p class="hero-description">
+            Discover a modern digital ecosystem designed for
+            online work, rewards, financial tools and professional
+            growth — all in one beautiful platform.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="registration.html"
+              class="primary-btn"
             >
-              Hopweb Introduction
-            </small>
+              <span>Create Free Account</span>
+              <b>→</b>
+            </a>
+
+            <a
+              href="#how"
+              class="secondary-btn"
+            >
+              Explore Platform
+            </a>
+
+          </div>
+
+          <div class="hero-trust">
+
+            <div class="trust-item">
+              <strong>10K+</strong>
+              <span>Platform Users</span>
+            </div>
+
+            <div class="trust-line"></div>
+
+            <div class="trust-item">
+              <strong>24/7</strong>
+              <span>Digital Access</span>
+            </div>
+
+            <div class="trust-line"></div>
+
+            <div class="trust-item">
+              <strong>Secure</strong>
+              <span>Cloud Platform</span>
+            </div>
 
           </div>
 
         </div>
 
 
+        <!-- RIGHT VISUAL -->
+        <div class="hero-visual">
+
+          <div class="visual-glow"></div>
+
+          <div class="floating-card card-top">
+            <span class="mini-icon">✦</span>
+            <div>
+              <small>Digital Growth</small>
+              <strong>+28.6%</strong>
+            </div>
+          </div>
+
+          <!-- PHONE -->
+          <div class="phone-frame">
+
+            <div class="phone-screen">
+
+              <div class="phone-notch"></div>
+
+              <div class="phone-status">
+                <span>9:41</span>
+                <span>● ● ▮</span>
+              </div>
+
+              <div class="app-top">
+
+                <div>
+                  <small>Welcome back</small>
+                  <strong>OKB Member</strong>
+                </div>
+
+                <div class="app-avatar">
+                  O
+                </div>
+
+              </div>
+
+              <div class="balance-card">
+
+                <div class="balance-label">
+                  AVAILABLE BALANCE
+                </div>
+
+                <div class="balance-amount">
+                  $<span id="phoneBalance">12,580</span>
+                </div>
+
+                <div class="balance-change">
+                  ↑ 18.42% this month
+                </div>
+
+                <div class="balance-chart">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+              </div>
+
+
+              <div class="phone-title">
+                Digital Activities
+              </div>
+
+              <div class="phone-grid">
+
+                <div class="phone-feature">
+                  <div>◈</div>
+                  <span>Work</span>
+                </div>
+
+                <div class="phone-feature">
+                  <div>◎</div>
+                  <span>Rewards</span>
+                </div>
+
+                <div class="phone-feature">
+                  <div>◇</div>
+                  <span>Wallet</span>
+                </div>
+
+                <div class="phone-feature">
+                  <div>↗</div>
+                  <span>Transfer</span>
+                </div>
+
+              </div>
+
+
+              <div class="activity-box">
+
+                <div class="activity-heading">
+                  <strong>Recent Activity</strong>
+                  <span>View all</span>
+                </div>
+
+                <div class="activity-row">
+                  <div class="activity-icon">↗</div>
+
+                  <div class="activity-info">
+                    <strong>Digital Work</strong>
+                    <small>Completed successfully</small>
+                  </div>
+
+                  <b>+$340</b>
+                </div>
+
+                <div class="activity-row">
+                  <div class="activity-icon">★</div>
+
+                  <div class="activity-info">
+                    <strong>Reward Bonus</strong>
+                    <small>Platform reward</small>
+                  </div>
+
+                  <b>+$120</b>
+                </div>
+
+              </div>
+
+              <div class="phone-bottom-nav">
+                <span class="active">⌂</span>
+                <span>◈</span>
+                <span>◎</span>
+                <span>◉</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="floating-card card-bottom">
+
+            <div class="success-circle">
+              ✓
+            </div>
+
+            <div>
+              <small>Activity Completed</small>
+              <strong>+$340.00</strong>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </section>
 
 
+    <!-- =========================================================
+         TRUST STRIP
+    ========================================================== -->
 
-    <!-- =================================================
+    <section class="trust-strip">
+
+      <div class="trust-strip-inner">
+
+        <span>SMART DIGITAL ECOSYSTEM</span>
+        <i></i>
+        <span>SECURE PLATFORM</span>
+        <i></i>
+        <span>MODERN EXPERIENCE</span>
+        <i></i>
+        <span>BUILT FOR GROWTH</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FEATURES
+    ========================================================== -->
+
+    <section class="section" id="features">
+
+      <div class="section-heading">
+
+        <div class="section-tag">
+          PLATFORM FEATURES
+        </div>
+
+        <h2>
+          Everything You Need.
+          <span>One Platform.</span>
+        </h2>
+
+        <p>
+          OKB brings essential digital tools together
+          in one simple and elegant experience.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+
+          <div class="feature-number">01</div>
+
+          <div class="feature-icon gold-icon">
+            ◈
+          </div>
+
+          <h3>Digital Work</h3>
+
+          <p>
+            Access structured digital activities and
+            build useful online skills through practical work.
+          </p>
+
+          <a href="registration.html">
+            Explore Work →
+          </a>
+
+        </article>
+
+
+        <article class="feature-card featured">
+
+          <div class="feature-number">02</div>
+
+          <div class="feature-icon gold-icon">
+            ✦
+          </div>
+
+          <h3>Rewards</h3>
+
+          <p>
+            Participate in platform activities and
+            discover reward opportunities available to members.
+          </p>
+
+          <a href="registration.html">
+            Discover Rewards →
+          </a>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-number">03</div>
+
+          <div class="feature-icon gold-icon">
+            ◇
+          </div>
+
+          <h3>Digital Wallet</h3>
+
+          <p>
+            Manage your digital balance with a clean,
+            organized wallet experience.
+          </p>
+
+          <a href="login.html">
+            Open Wallet →
+          </a>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-number">04</div>
+
+          <div class="feature-icon gold-icon">
+            ↗
+          </div>
+
+          <h3>Referral Network</h3>
+
+          <p>
+            Build your network, invite members and
+            track your referral activity.
+          </p>
+
+          <a href="login.html">
+            Start Building →
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SHOWCASE
+    ========================================================== -->
+
+    <section class="showcase-section">
+
+      <div class="showcase-container">
+
+        <div class="showcase-image">
+
+          <div class="showcase-orb"></div>
+
+          <div class="glass-dashboard">
+
+            <div class="dashboard-header">
+              <div>
+                <small>MONTHLY OVERVIEW</small>
+                <h3>Performance</h3>
+              </div>
+
+              <span>2026</span>
+            </div>
+
+            <div class="large-number">
+              $24,860
+            </div>
+
+            <div class="growth">
+              ↑ 32.8% compared to last month
+            </div>
+
+            <div class="fake-chart">
+
+              <span style="height:32%"></span>
+              <span style="height:45%"></span>
+              <span style="height:39%"></span>
+              <span style="height:57%"></span>
+              <span style="height:52%"></span>
+              <span style="height:72%"></span>
+              <span style="height:64%"></span>
+              <span style="height:82%"></span>
+              <span style="height:76%"></span>
+              <span style="height:94%"></span>
+
+            </div>
+
+            <div class="chart-labels">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="showcase-content">
+
+          <div class="section-tag">
+            DESIGNED FOR PEOPLE
+          </div>
+
+          <h2>
+            A Smarter Way
+            To Manage Your
+            <span>Digital Journey.</span>
+          </h2>
+
+          <p>
+            From digital work and rewards to wallet management
+            and referrals, OKB is designed to keep your
+            experience simple, transparent and organized.
+          </p>
+
+          <div class="check-list">
+
+            <div>
+              <span>✓</span>
+              <p>Simple and intuitive interface</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Mobile-first digital experience</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Organized account dashboard</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Secure cloud-based infrastructure</p>
+            </div>
+
+          </div>
+
+          <a
+            href="login.html"
+            class="primary-btn"
+          >
+            Join OKB
+            <b>→</b>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
          HOW IT WORKS
-    ================================================== -->
+    ========================================================== -->
 
-    <section
-      class="public-section"
-      id="how-it-works"
-    >
+    <section class="section how-section" id="how">
+
+      <div class="section-heading">
+
+        <div class="section-tag">
+          HOW IT WORKS
+        </div>
+
+        <h2>
+          Start In
+          <span>Three Simple Steps.</span>
+        </h2>
+
+        <p>
+          Getting started with OKB is designed to be simple.
+        </p>
+
+      </div>
 
 
-      <h2 class="section-heading">
-        How It Works
-      </h2>
+      <div class="steps-grid">
 
-
-      <p class="section-description">
-        Getting started with Hopweb is simple.
-      </p>
-
-
-      <div class="steps">
-
-
-        <div class="step">
+        <div class="step-card">
 
           <div class="step-number">
             01
           </div>
 
-          <div class="step-content">
-
-            <strong>
-              Create Your Account
-            </strong>
-
-            <small>
-              Register using your required account
-              information.
-            </small>
-
+          <div class="step-icon">
+            +
           </div>
+
+          <h3>Create Account</h3>
+
+          <p>
+            Register your account and create your
+            personal digital profile.
+          </p>
 
         </div>
 
 
-        <div class="step">
+        <div class="step-card">
 
           <div class="step-number">
             02
           </div>
 
-          <div class="step-content">
-
-            <strong>
-              Explore Available Work
-            </strong>
-
-            <small>
-              Browse available jobs and services from
-              your dashboard.
-            </small>
-
+          <div class="step-icon">
+            ◈
           </div>
+
+          <h3>Explore Platform</h3>
+
+          <p>
+            Discover available work, rewards,
+            wallet and digital services.
+          </p>
 
         </div>
 
 
-        <div class="step">
+        <div class="step-card">
 
           <div class="step-number">
             03
           </div>
 
-          <div class="step-content">
-
-            <strong>
-              Apply & Complete
-            </strong>
-
-            <small>
-              Follow the requirements and complete
-              available work.
-            </small>
-
+          <div class="step-icon">
+            ✦
           </div>
+
+          <h3>Grow With OKB</h3>
+
+          <p>
+            Complete eligible activities and
+            develop your digital journey.
+          </p>
 
         </div>
-
-
-        <div class="step">
-
-          <div class="step-number">
-            04
-          </div>
-
-          <div class="step-content">
-
-            <strong>
-              Manage Your Account
-            </strong>
-
-            <small>
-              Manage your profile, wallet and support
-              services from one place.
-            </small>
-
-          </div>
-
-        </div>
-
 
       </div>
 
     </section>
 
 
+    <!-- =========================================================
+         ABOUT COMPANY
+    ========================================================== -->
 
-    <!-- =================================================
-         COMPANY / SHAREHOLDERS
-    ================================================== -->
+    <section class="about-section" id="about">
 
-    <section class="public-section">
+      <div class="about-container">
 
+        <div class="about-content">
 
-      <h2 class="section-heading">
-        Our Company
-      </h2>
+          <div class="section-tag">
+            ABOUT OKB
+          </div>
 
+          <h2>
+            Building A More
+            <span>Connected Digital Future.</span>
+          </h2>
 
-      <p class="section-description">
-        Company leadership and associated members.
-      </p>
+          <p>
+            OKB is designed as a modern digital ecosystem
+            where people can discover online work,
+            digital services, rewards and financial tools
+            through one unified experience.
+          </p>
 
+          <p>
+            Our goal is to make digital platforms easier
+            to understand, easier to use and more accessible
+            across mobile devices.
+          </p>
 
-      <div class="people-scroll">
+          <div class="company-stats">
 
+            <div>
+              <strong>01</strong>
+              <span>Unified Platform</span>
+            </div>
 
-        <div class="person-card">
+            <div>
+              <strong>24/7</strong>
+              <span>Digital Access</span>
+            </div>
 
-          <img
-            class="person-image"
-            src="../assets/img/company/person-1.jpg"
-            alt="Company Member"
-            onerror="this.style.display='none'"
-          >
+            <div>
+              <strong>∞</strong>
+              <span>Growth Potential</span>
+            </div>
 
-          <strong>
-            Company Member
-          </strong>
-
-          <small>
-            Management
-          </small>
-
-        </div>
-
-
-        <div class="person-card">
-
-          <img
-            class="person-image"
-            src="../img/company/person-2.jpg"
-            alt="Company Member"
-            onerror="this.style.display='none'"
-          >
-
-          <strong>
-            Company Member
-          </strong>
-
-          <small>
-            Shareholder
-          </small>
+          </div>
 
         </div>
 
 
-        <div class="person-card">
+        <div class="about-visual">
 
-          <img
-            class="person-image"
-            src="../img/company/person-3.jpg"
-            alt="Company Member"
-            onerror="this.style.display='none'"
-          >
+          <div class="image-composition">
 
-          <strong>
-            Company Member
-          </strong>
+            <div class="image-card image-main">
 
-          <small>
-            Management
-          </small>
+              <div class="abstract-building">
+
+                <div class="building-line"></div>
+                <div class="building-line"></div>
+                <div class="building-line"></div>
+                <div class="building-line"></div>
+                <div class="building-line"></div>
+
+              </div>
+
+              <div class="image-caption">
+                <small>OKB</small>
+                <strong>Digital Ecosystem</strong>
+              </div>
+
+            </div>
+
+
+            <div class="image-card image-small">
+
+              <div class="gold-symbol">
+                ✦
+              </div>
+
+              <strong>
+                Think.
+                Build.
+                Grow.
+              </strong>
+
+            </div>
+
+
+            <div class="floating-badge">
+              <span>✦</span>
+              <div>
+                <small>OUR VISION</small>
+                <strong>Digital Growth</strong>
+              </div>
+            </div>
+
+          </div>
 
         </div>
-
 
       </div>
 
     </section>
 
 
+    <!-- =========================================================
+         CTA
+    ========================================================== -->
 
-    <!-- =================================================
-         RULES
-    ================================================== -->
+    <section class="cta-section">
 
-    <section class="public-section">
+      <div class="cta-glow"></div>
 
+      <div class="cta-content">
 
-      <h2 class="section-heading">
-        Rules & Policies
-      </h2>
-
-
-      <p class="section-description">
-        Please review the platform rules before creating
-        an account.
-      </p>
-
-
-      <div class="rules-card">
-
-
-        <div class="rule">
-
-          <div class="rule-number">
-            01
-          </div>
-
-          <div class="rule-text">
-            Users must provide accurate and valid
-            information during registration.
-          </div>
-
+        <div class="section-tag">
+          YOUR DIGITAL JOURNEY STARTS HERE
         </div>
 
+        <h2>
+          Ready To Build
+          <span>Your Next Chapter?</span>
+        </h2>
 
-        <div class="rule">
+        <p>
+          Create your OKB account and explore the platform.
+        </p>
 
-          <div class="rule-number">
-            02
-          </div>
-
-          <div class="rule-text">
-            Each user should maintain and use only
-            their authorized account.
-          </div>
-
-        </div>
-
-
-        <div class="rule">
-
-          <div class="rule-number">
-            03
-          </div>
-
-          <div class="rule-text">
-            Users must follow all applicable work,
-            payment and platform requirements.
-          </div>
-
-        </div>
-
-
-        <div class="rule">
-
-          <div class="rule-number">
-            04
-          </div>
-
-          <div class="rule-text">
-            Suspicious, fraudulent or unauthorized
-            activity may result in account restrictions.
-          </div>
-
-        </div>
-
-
-        <div class="rule">
-
-          <div class="rule-number">
-            05
-          </div>
-
-          <div class="rule-text">
-            Additional official terms and conditions
-            can be added to this section later.
-          </div>
-
-        </div>
-
+        <a
+          href="registration.html"
+          class="cta-button"
+        >
+          Create Your Account
+          <span>→</span>
+        </a>
 
       </div>
 
     </section>
-
-
-
-    <!-- =================================================
-         CONTACT
-    ================================================== -->
-
-    <section class="public-section">
-
-
-      <h2 class="section-heading">
-        Contact & Company Information
-      </h2>
-
-
-      <div class="contact-grid">
-
-
-        <div class="contact-item">
-
-          <span>
-            ✉️
-          </span>
-
-          <strong>
-            Email
-          </strong>
-
-          <small>
-            support@hopweb.com
-          </small>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <span>
-            📍
-          </span>
-
-          <strong>
-            Address
-          </strong>
-
-          <small>
-            Company Address
-          </small>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <span>
-            🌐
-          </span>
-
-          <strong>
-            Platform
-          </strong>
-
-          <small>
-            Hopweb Digital Platform
-          </small>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <span>
-            🎧
-          </span>
-
-          <strong>
-            Support
-          </strong>
-
-          <small>
-            Customer Care
-          </small>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
 
   </main>
 
 
-
-  <!-- =================================================
+  <!-- =========================================================
        FOOTER
-  ================================================== -->
+  ========================================================== -->
 
-  <footer class="public-footer">
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <div class="brand footer-logo">
+
+          <div class="brand-mark">
+            <span>O</span>
+          </div>
+
+          <div class="brand-text">
+            <strong>OKB</strong>
+            <small>Digital Platform</small>
+          </div>
+
+        </div>
+
+        <p>
+          A modern digital ecosystem built for
+          work, rewards and growth.
+        </p>
+
+      </div>
 
 
-    <img
-      class="footer-logo"
-      src="../img/logo/hopweb-logo.svg"
-      alt="Hopweb"
-    >
+      <div class="footer-column">
+
+        <h4>Platform</h4>
+
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About</a>
+
+      </div>
 
 
-    <span class="footer-name">
-      Hopweb
-    </span>
+      <div class="footer-column">
+
+        <h4>Account</h4>
+
+        <a href="registration.html">Login</a>
+        <a href="registration.html">Register</a>
+
+      </div>
 
 
-    <p class="footer-text">
+      <div class="footer-column">
 
-      A modern digital work and services platform
-      designed for a simple and user-friendly experience.
+        <h4>Information</h4>
 
-    </p>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
 
-
-    <div class="footer-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="html/register.html">
-        Register
-      </a>
-
-      <a href="html/login.html">
-        Login
-      </a>
-
-      <a href="help.html">
-        Support
-      </a>
+      </div>
 
     </div>
 
 
-    <div class="copyright">
+    <div class="footer-bottom">
 
-      © 2026 Hopweb. All rights reserved.
+      <span>
+        © <span id="currentYear"></span> OKB. All rights reserved.
+      </span>
+
+      <span>
+        Designed for a better digital future.
+      </span>
 
     </div>
-
 
   </footer>
 
 
-
-</div>
-
-
-
-<!-- =================================================
-     FIREBASE AUTH LOADING
-================================================== -->
-
-<div
-  id="authLoading"
-  class="auth-loading"
->
-
-  <div class="loading-box">
-
-    <img
-      class="loading-logo"
-      src="../img/logo/hopweb-logo.svg"
-      alt="Hopweb"
-    >
-
-    <span class="loading-text">
-      Loading your account...
-    </span>
-
-  </div>
-
-</div>
-
-
-
-<!-- =================================================
-     PUBLIC INDEX JAVASCRIPT
-================================================== -->
-
-<script type="module">
-
-/*
-=====================================================
-HOPWEB PUBLIC INDEX
-
-IMPORTANT:
-
-Firebase configuration should NOT be written
-directly into this public HTML file.
-
-Your Firebase configuration can be connected
-through:
-
-../firebase/firebase-config.js
-
-Expected export:
-
-export const auth = ...;
-
-The authenticated Firebase user will then be
-automatically redirected to:
-
-dashboard.html
-
-If the visitor is not logged in, this public
-page remains visible.
-=====================================================
-*/
-
-
-const loading =
-document.getElementById("authLoading");
-
-
-/*
------------------------------------------------------
-FIREBASE AUTO LOGIN CHECK
-
-When your Firebase config file is ready,
-uncomment the block below and adjust the import
-to match your firebase-config.js exports.
------------------------------------------------------
-*/
-
-
-/*
-
-import { auth } from "../firebase/firebase-config.js";
-
-import {
-  onAuthStateChanged
-} from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-
-
-onAuthStateChanged(
-  auth,
-  (user) => {
-
-    if(user){
-
-      loading.classList.add("show");
-
-      window.location.replace(
-        "dashboard.html"
-      );
-
-    }
-
-  }
-);
-
-*/
-
-
-/*
-=====================================================
-TEMPORARY HOOK
-
-The public page does NOT redirect automatically
-until Firebase Auth is connected.
-
-This prevents an incorrect redirect when the
-Firebase configuration has not yet been added.
-=====================================================
-*/
-
-</script>
-
+  <!-- Public JS -->
+  <script src="js/public.js"></script>
 
 </body>
-
 </html>
